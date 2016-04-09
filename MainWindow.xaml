@@ -1,0 +1,29 @@
+﻿<Window x:Class="GetASCII.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Name="getAscii"
+        Title="GetASCII" 
+		Height="120" 
+		Width="210" 
+		Background="Beige" 
+		ResizeMode="NoResize" 
+		WindowStartupLocation="CenterScreen"
+        KeyDown="getAscii_KeyDown">
+    <Grid>
+        <StackPanel Orientation="Horizontal" Margin="0,0,50,40">
+            <Label Content="Your Character" Margin="0,10"/>
+            <TextBox Name="txtInptChar"  Height="28" Width="50" KeyDown="txtInptChar_KeyDown" />
+        </StackPanel>
+        <Button Name="btnGetVal" Background="PowderBlue" Foreground="Red" Height="70" Width="40" Margin="140,5,5,5" Click="btnGetVal_Click">
+            <TextBlock>
+                <TextBlock Text="ASCII"/>
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="-55"/>
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Button>
+        <Label Name="lblWrngChar" Content="Wrong Character" Foreground="IndianRed" FontWeight="Heavy" Margin="5,50,50,10" Visibility="Hidden"/>
+        <Label Name ="lblASCII" Content="ASCII Value:" Margin="5,50,112,10"/>
+        <Label Name="lblAns" Foreground ="IndianRed"  FontWeight="Heavy" Margin="80,50,50,5"/>
+    </Grid>
+</Window>
